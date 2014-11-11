@@ -2,11 +2,11 @@ extends layout
 
 block content
   h1= title
-  form( action="/p/new", method="post" )
+  form( action="", method="post" )
     laber( for="nombre" ) Nombre:
-    input#name( type="text", name="nombre" )
+    input#name( type="text", name="nombre", value=persona.nombre )
     br
     label( for="age" ) Edad:
-    input#age( type="text", name="age" )
+    input#age( type="text", name="age", value=persona.age )
     br
     input( type="submit", value="Guardar" )

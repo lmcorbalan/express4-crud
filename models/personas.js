@@ -1,9 +1,9 @@
-var mongoose = require('mongoose')
-  , Schema = mongoose.Schema;
+var mongoose = require( 'mongoose' )
+  , Schema   = mongoose.Schema;
 
 var personaSchema = new Schema({
-    nombre      : String,
-    age       : Number
+  nombre: String,
+  age   : Number
 });
 
 /**
@@ -20,6 +20,5 @@ personaSchema.static.create = function (data, cb) {
   p.save( cb );
 }
 
-var personaModel = mongoose.model("Personas", personaSchema);
-
-module.exports = personaModel;
+var personaModel = mongoose.model( "Personas", personaSchema );
+module.exports   = personaModel;
