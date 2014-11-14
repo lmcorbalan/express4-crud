@@ -47,6 +47,16 @@ module.exports = function (grunt) {
         options: {
           livereload: reloadPort
         }
+      },
+      bower: {
+        files: ['bower.json'],
+        tasks: ['wiredep']
+      }
+    },
+    wiredep: {
+      target: {
+        src: ['views/layout.jade'],
+        ignorePath: '../public'
       }
     }
   });

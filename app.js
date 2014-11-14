@@ -29,13 +29,14 @@ app.use( bodyParser.urlencoded({
 }));
 
 app.use( cookieParser());
+app.use( express.static( path.join( __dirname, 'public' ) ) );
+app.use( express.static( path.join( __dirname, 'public/components' ) ) );
 app.use( session({
     secret: 'wild thing',
     resave: true,
     saveUninitialized: true
 }))
 app.use( flash() );
-app.use( express.static( path.join( __dirname, 'public' ) ) );
 
 require( './routes/main' );
 
